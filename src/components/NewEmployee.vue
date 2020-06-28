@@ -13,7 +13,7 @@
 
           <v-text-field v-model="department" label="Department" required></v-text-field>
 
-          <v-text-field v-model="position" label="Posisition" required></v-text-field>
+          <v-text-field v-model="position" label="Position" required></v-text-field>
 
           <v-btn color="error" class="mr-4" to="/">Cancel</v-btn>
 
