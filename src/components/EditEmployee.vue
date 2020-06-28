@@ -1,7 +1,10 @@
 <template>
   <div id="edit-employee">
-    <v-card color="#385F73" dark>
-      <v-card-title class="headline">Edit Employee</v-card-title>
+    <v-card color="white" class="elevation-12">
+    <v-toolbar color="primary" dark flat>
+      <v-toolbar-title>Edit Employee</v-toolbar-title>
+      <v-spacer></v-spacer>
+    </v-toolbar>
       <v-card-text class="pa-3">
         <v-form ref="form" v-model="valid">
           <v-text-field v-model="employeeId" label="Employee ID" required></v-text-field>

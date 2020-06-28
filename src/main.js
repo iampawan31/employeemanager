@@ -4,16 +4,23 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-// import '@/assets/styles/index.css'
 import vuetify from '@/plugins/vuetify'
+
+import firebase from 'firebase'
+import './components/firebaseInit'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  vuetify,
-  components: { App },
-  template: '<App/>'
+let app
+firebase.auth().onAuthStateChanged(user => {
+  if (!app) {
+    /* eslint-disable no-new */
+    new Vue({
+      el: '#app',
+      router,
+      vuetify,
+      components: { App },
+      template: '<App/>'
+    })
+  }
 })

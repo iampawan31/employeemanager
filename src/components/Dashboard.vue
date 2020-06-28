@@ -1,12 +1,10 @@
 <template>
   <div id="dashboard">
-    <v-card color="#385F73" dark>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="headline">Employee Manager</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
+    <v-card color="white" class="elevation-12">
+    <v-toolbar color="primary" dark flat>
+      <v-toolbar-title>Employee List</v-toolbar-title>
+      <v-spacer></v-spacer>
+    </v-toolbar>
       <v-card-text>
         <v-list-item v-for="employee in employees" v-bind:key="employee.employee_id">
           <v-list-item-avatar>

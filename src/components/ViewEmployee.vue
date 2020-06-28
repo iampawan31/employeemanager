@@ -1,7 +1,10 @@
 <template>
   <div id="view-employee">
-    <v-card color="#385F73" dark>
-      <v-card-title class="headline">{{ name }} ({{ employeeId }})</v-card-title>
+    <v-card color="white" class="elevation-12">
+      <v-toolbar color="primary" dark flat>
+        <v-toolbar-title>{{ name }} ({{ employeeId }})</v-toolbar-title>
+        <v-spacer></v-spacer>
+      </v-toolbar>
       <v-card-subtitle>{{ `${position} - ${department}` }}</v-card-subtitle>
       <v-card-actions>
         <v-btn flat to="/" text>Back</v-btn>
